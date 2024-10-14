@@ -45,7 +45,7 @@
   
    </details>
 
-# New Core Activity
+# Core Activity
 
 Rather than re-invent the wheel we're going to make use of some of AWS' own documentation to introduce the Serverless Java Container as a way of using Spring with AWS Lambda and API Gateway to create a serverless API environment.
 
