@@ -53,7 +53,7 @@ Rather than re-invent the wheel we're going to make use of some of AWS' own docu
 
 - The Quick Start Guide for deploying a Spring 3 App with a Serverless Container is [here](https://github.com/aws/serverless-java-container/wiki/Quick-start---Spring-Boot3)
 
-- The Sample Application can be found [here](https://github.com/aws/serverless-java-container/tree/main/aws-serverless-java-container-springboot3)
+- The Sample Application can be found [here](https://github.com/aws/serverless-java-container/tree/main/samples/springboot3/pet-store)
 
 - Take some time this morning, to rework either the Todo App or a Spring App of your own in order to deploy it via AWS Lambda and the API Gateway as documented in these.
 
