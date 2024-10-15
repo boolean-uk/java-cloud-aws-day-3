@@ -6,15 +6,15 @@ Globals:
     EndpointConfiguration: REGIONAL
 
 Resources:
-  MyServiceFunction:
+  MyTodoFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.booleanuk.StreamLambdaHandler::handleRequest
       Runtime: java21
       CodeUri: .
-      MemorySize: 512
+      MemorySize: 1512
       Policies: AWSLambdaBasicExecutionRole
-      Timeout: 60
+      Timeout: 120
       Events:
         HttpApiEvent:
           Type: HttpApi
@@ -23,9 +23,9 @@ Resources:
             PayloadFormatVersion: '1.0'
 
 Outputs:
-  MyServiceApi:
+  MySpringTodoApi:
     Description: URL for application
-    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/todos'
+    Value: !Sub 'https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/todos'
 
     Export:
-      Name: TodoServiceApi
+      Name: MySpringTodoApi

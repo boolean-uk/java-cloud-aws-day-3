@@ -7,6 +7,6 @@ architecture = "x86_64"
 handler = "my.service.StreamLambdaHandler::handleRequest"
 manifest_hash = ""
 packagetype = "Zip"
-functions = ["MyServiceFunction"]
+functions = ["MyTodoFunction"]
 
 [layer_build_definitions]
