@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Import;
 // @ComponentScan(basePackages = "my.service.controller")
 @Import({ TodoController.class })
 public class Main {
-
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }

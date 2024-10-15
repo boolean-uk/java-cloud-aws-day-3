@@ -14,18 +14,18 @@ Resources:
       CodeUri: .
       MemorySize: 512
       Policies: AWSLambdaBasicExecutionRole
-      Timeout: 30
+      Timeout: 60
       Events:
-        ProxyResource:
-          Type: Api
+        HttpApiEvent:
+          Type: HttpApi
           Properties:
-            Path: /{proxy+}
-            Method: any
+            TimeoutInMillis: 20000
+            PayloadFormatVersion: '1.0'
 
 Outputs:
   MyServiceApi:
     Description: URL for application
-    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/todos'
 
     Export:
-      Name: MyServiceApi
+      Name: TodoServiceApi
