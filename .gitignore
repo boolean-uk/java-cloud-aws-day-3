@@ -37,3 +37,6 @@ out/
 .vscode/
 
 application.yml
+.terraform
+*terraform
+.zip.backend
