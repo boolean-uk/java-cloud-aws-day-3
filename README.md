@@ -153,3 +153,21 @@ Rather than re-invent the wheel we're going to make use of some of AWS' own docu
    - Verify that different routes trigger different Lambda functions. For instance:
    - `/register` calls the user registration function.
    - `/order` calls the order processing function.
+
+
+# Submission
+The steps below was done with the pet-store example from aws.
+
+1. Installed SAM CLI
+2. Installed AWS CLI
+3. Downloaded sample folder from AWS with pet-store example code
+4. Configured AWS CLI according to this video: https://www.youtube.com/watch?v=Rp-A84oh4G8
+   (Created access key for my IAM user)
+5. Auto loaded build.gradle in IntelliJ on prompt
+6. Change the template.yml file:  
+   Under 'Resources:', change `PetStoreFunction` to a unique name.  
+   Under 'Outputs:', change `SpringBootPetStoreApi` to a unique name, add/change this name below at 'Export:' > 'Name:' as well. 
+6. Run `sam build`
+7. Run `sam deploy --guided`
+
+![](/images/1_uploaded_severlessLambdaPetstore.png)
