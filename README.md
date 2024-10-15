@@ -156,7 +156,7 @@ Rather than re-invent the wheel we're going to make use of some of AWS' own docu
 
 
 # Submission
-The steps below was done with the pet-store example from aws.
+The steps below were done with the pet-store example from aws.
 
 1. Installed SAM CLI
 2. Installed AWS CLI
