@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.beans.ConstructorProperties;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,11 +28,12 @@ public class Todo {
     public Todo(int id){
         this.id = id;
     }
-
+   // @ConstructorProperties({"title"})
     public Todo(String title) {
         this.title = title;
         this.completed = false;
     }
+    //@ConstructorProperties({"title", "completed"})
     public Todo(String title, boolean completed) {
         this.title = title;
         this.completed = completed;
