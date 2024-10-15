@@ -2,7 +2,6 @@ package com.booleanuk.TodoApp.controllers;
 
 import com.booleanuk.TodoApp.models.Todo;
 import com.booleanuk.TodoApp.repositories.TodoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +12,12 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("todos")
-
 public class TodoController {
-    @Autowired
-    private TodoRepository todoRepository;
+    private final TodoRepository todoRepository;
+
+    public TodoController(TodoRepository todoRepository) {
+        this.todoRepository = todoRepository;
+    }
 
     @GetMapping
     public ResponseEntity<List<Todo>> getAllTodos() {
