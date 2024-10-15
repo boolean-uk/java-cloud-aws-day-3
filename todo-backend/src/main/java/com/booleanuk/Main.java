@@ -1,6 +1,6 @@
 package com.booleanuk;
 
-import com.booleanuk.TodoApp.controllers.HomeController;
+//import com.booleanuk.TodoApp.controllers.HomeController;
 //import com.booleanuk.TodoApp.controllers.TodoController;
 import com.booleanuk.TodoApp.controllers.TodoController;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @SpringBootApplication
-@Import({TodoController.class, HomeController.class})
+@Import({TodoController.class})
 public class Main {
 
     public static void main(String[] args) {

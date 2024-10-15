@@ -1,8 +1,8 @@
 version = 0.1
 [default.deploy.parameters]
-stack_name = "dagtodoapp2"
+stack_name = "dagtodo5"
 resolve_s3 = true
-s3_prefix = "dagtodoapp2"
+s3_prefix = "dagtodo5"
 region = "eu-west-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"

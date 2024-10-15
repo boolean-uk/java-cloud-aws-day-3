@@ -29,4 +29,4 @@ Outputs:
     Description: URL for application
     Value: !Sub 'https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/pets'
     Export:
-      Name: DagTodoListProject2
+      Name: DagTodoListProject3
