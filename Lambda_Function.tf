@@ -46,30 +46,55 @@ resource "aws_api_gateway_rest_api" "api" {
   name = "sebastian-rone-api"
 }
 
-resource "aws_api_gateway_resource" "resource" {
+resource "aws_api_gateway_resource" "register_resource" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   parent_id   = aws_api_gateway_rest_api.api.root_resource_id
   path_part   = "register"
 }
 
-resource "aws_api_gateway_method" "method" {
+resource "aws_api_gateway_method" "register_method" {
   rest_api_id   = aws_api_gateway_rest_api.api.id
-  resource_id   = aws_api_gateway_resource.resource.id
+  resource_id   = aws_api_gateway_resource.register_resource.id
   http_method   = "GET"
   authorization = "NONE"
 }
 
-resource "aws_api_gateway_integration" "integration" {
+resource "aws_api_gateway_integration" "register_integration" {
   rest_api_id             = aws_api_gateway_rest_api.api.id
-  resource_id             = aws_api_gateway_resource.resource.id
-  http_method             = aws_api_gateway_method.method.http_method
+  resource_id             = aws_api_gateway_resource.register_resource.id
+  http_method             = aws_api_gateway_method.register_method.http_method
+  type                    = "AWS_PROXY"
+  integration_http_method = "POST"
+  uri                     = aws_lambda_function.backend.invoke_arn
+}
+
+resource "aws_api_gateway_resource" "todos_resource" {
+  rest_api_id = aws_api_gateway_rest_api.api.id
+  parent_id   = aws_api_gateway_rest_api.api.root_resource_id
+  path_part   = "todos"
+}
+
+resource "aws_api_gateway_method" "todos_method" {
+  rest_api_id   = aws_api_gateway_rest_api.api.id
+  resource_id   = aws_api_gateway_resource.todos_resource.id
+  http_method   = "GET"
+  authorization = "NONE"
+}
+
+resource "aws_api_gateway_integration" "todos_integration" {
+  rest_api_id             = aws_api_gateway_rest_api.api.id
+  resource_id             = aws_api_gateway_resource.todos_resource.id
+  http_method             = aws_api_gateway_method.todos_method.http_method
   type                    = "AWS_PROXY"
   integration_http_method = "POST"
   uri                     = aws_lambda_function.backend.invoke_arn
 }
 
 resource "aws_api_gateway_deployment" "deployment" {
-  depends_on = [aws_api_gateway_integration.integration]
+  depends_on = [
+    aws_api_gateway_integration.register_integration,
+    aws_api_gateway_integration.todos_integration
+  ]
   rest_api_id = aws_api_gateway_rest_api.api.id
   stage_name  = "prod"
 }

@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
-
 public class RegisterController {
     @GetMapping("register")
     public ResponseEntity<String> registerUser() {
