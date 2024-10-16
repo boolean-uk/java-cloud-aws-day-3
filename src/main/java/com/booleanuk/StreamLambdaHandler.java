@@ -23,14 +23,12 @@ public class StreamLambdaHandler implements RequestStreamHandler {
     static {
         try {
             handler = SpringBootLambdaContainerHandler.getAwsProxyHandler(Main.class);
-
-            // we use the onStartup method of the handler to register our custom filter
             handler.onStartup(servletContext -> {
                 FilterRegistration.Dynamic registration = servletContext.addFilter("CognitoIdentityFilter", CognitoIdentityFilter.class);
                 registration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/*");
             });
         } catch (ContainerInitializationException e) {
-            // if we fail here. We re-throw the exception to force another cold start
+
             e.printStackTrace();
             throw new RuntimeException("Could not initialize Spring Boot application", e);
         }
