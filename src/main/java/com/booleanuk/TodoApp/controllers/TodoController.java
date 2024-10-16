@@ -7,11 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
 
-@CrossOrigin
+@EnableWebMvc
 @RestController
+@CrossOrigin
 @RequestMapping("todos")
 public class TodoController {
     @Autowired
