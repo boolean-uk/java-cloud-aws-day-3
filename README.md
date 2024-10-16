@@ -1,3 +1,17 @@
+# Screenshots
+
+### Petstore
+
+![PetStore_works.png](PetStore_works.png)
+![PETS_api.png](PETS_api.png)
+
+### Todo app, using same database as Dag
+
+![todo-working.png](todo-working.png)
+
+![tuva-todo-dashbaord-lambda.png](tuva-todo-dashbaord-lambda.png)
+
+
 # JAVA Cloud AWS - Day Three
 
 ## Learning Objectives
