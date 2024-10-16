@@ -153,3 +153,13 @@ Rather than re-invent the wheel we're going to make use of some of AWS' own docu
    - Verify that different routes trigger different Lambda functions. For instance:
    - `/register` calls the user registration function.
    - `/order` calls the order processing function.
+
+
+
+### Submission
+
+Installed AWS and SAM and build for pet-store
+
+API_URL: https://bmw0c11ma1.execute-api.eu-west-1.amazonaws.com/pets
+https://nwa8pugijc.execute-api.eu-west-1.amazonaws.com/todos
+Todos now work as well
