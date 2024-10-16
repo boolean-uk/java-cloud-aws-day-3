@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "thomas-w-slorsopp-azm"
+resolve_s3 = true
+s3_prefix = "thomas-w-slorsopp-azm"
+region = "eu-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
