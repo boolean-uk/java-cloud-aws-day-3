@@ -1,0 +1,1 @@
+Please note that in order to access the todo endpoint, "/todo" needs to be added to the end of the URL in AWS.
