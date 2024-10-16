@@ -161,3 +161,5 @@ Rather than re-invent the wheel we're going to make use of some of AWS' own docu
 Installed AWS and SAM and build for pet-store
 
 API_URL: https://bmw0c11ma1.execute-api.eu-west-1.amazonaws.com/pets
+https://nwa8pugijc.execute-api.eu-west-1.amazonaws.com/todos
+Todos now work as well
