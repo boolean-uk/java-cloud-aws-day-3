@@ -170,4 +170,19 @@ The steps below were done with the pet-store example from aws.
 6. Run `sam build`
 7. Run `sam deploy --guided`
 
-![](/images/1_uploaded_severlessLambdaPetstore.png)
+![](/images/1_uploaded_severlessLambdaPetstore.png)  
+
+For the TodoApp:  
+1. I used todo-backend from the Aws Day 1 exercise.
+2. Changed database connection to neondb
+3. Copied across the filter folder, the StreamLambdaHandler file, and template.yml from the pet-store project
+4. In StreamLambdaHandler: Changed import for the filter folder/file, changed `Application.class` to `Main.class`
+5. Had issue with the `sam build command`, changed the buil.gradle file to another version without tests, used the commands:  
+   `./gradlew clean`  
+   `./gradlew build`  
+   deleted the .aws-sam folder  
+   `sam build`  
+   `sam deploy --guided`  
+
+Created:  
+![](/images/2_created_Serverless_todo.png)
