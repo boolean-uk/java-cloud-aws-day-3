@@ -153,3 +153,6 @@ Rather than re-invent the wheel we're going to make use of some of AWS' own docu
    - Verify that different routes trigger different Lambda functions. For instance:
    - `/register` calls the user registration function.
    - `/order` calls the order processing function.
+
+## Link to API Gateway 
+### https://x6xkewauoe.execute-api.eu-west-1.amazonaws.com/prod/register
