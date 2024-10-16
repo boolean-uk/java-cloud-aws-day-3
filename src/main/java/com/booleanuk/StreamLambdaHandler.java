@@ -8,7 +8,6 @@ import com.amazonaws.serverless.proxy.spring.SpringBootLambdaContainerHandler;
 import com.booleanuk.filter.CognitoIdentityFilter;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
-import com.booleanuk.filter.CognitoIdentityFilter;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.FilterRegistration;
 

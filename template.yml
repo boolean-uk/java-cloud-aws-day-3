@@ -6,7 +6,7 @@ Globals:
     EndpointConfiguration: REGIONAL
 
 Resources:
-  MyTodoFunction:
+  FredrikHauptApp:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.booleanuk.StreamLambdaHandler::handleRequest
@@ -23,9 +23,9 @@ Resources:
             PayloadFormatVersion: '1.0'
 
 Outputs:
-  MySpringTodoApi:
+  FredrikHauptApp:
     Description: URL for application
     Value: !Sub 'https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/todos'
 
     Export:
-      Name: MySpringTodoApi
+      Name: FredrikHauptApp

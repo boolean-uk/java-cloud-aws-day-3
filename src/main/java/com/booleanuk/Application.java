@@ -18,24 +18,24 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 public class Application {
 
     // silence console logging
-    @Value("${logging.level.root:OFF}")
-    String message = "";
+//    @Value("${logging.level.root:OFF}")
+//    String message = "";
 
     /*
      * Create required HandlerMapping, to avoid several default HandlerMapping instances being created
      */
-    @Bean
-    public HandlerMapping handlerMapping() {
-        return new RequestMappingHandlerMapping();
-    }
+//    @Bean
+//    public HandlerMapping handlerMapping() {
+//        return new RequestMappingHandlerMapping();
+//    }
 
     /*
      * Create required HandlerAdapter, to avoid several default HandlerAdapter instances being created
      */
-    @Bean
-    public HandlerAdapter handlerAdapter() {
-        return new RequestMappingHandlerAdapter();
-    }
+//    @Bean
+//    public HandlerAdapter handlerAdapter() {
+//        return new RequestMappingHandlerAdapter();
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

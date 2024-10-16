@@ -2,7 +2,7 @@
   <library name="Gradle: org.apache.commons:commons-fileupload2-jakarta-servlet6:2.0.0-M2" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.apache.commons" artifactId="commons-fileupload2-jakarta-servlet6" version="2.0.0-M2" />
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-fileupload2-jakarta-servlet6/2.0.0-M2/de8ac10c2fcf051714db8c23754cce58eacdcdb6/commons-fileupload2-jakarta-servlet6-2.0.0-M2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-fileupload2-jakarta-servlet6/2.0.0-M2/commons-fileupload2-jakarta-servlet6-2.0.0-M2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
